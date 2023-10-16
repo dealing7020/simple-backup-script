@@ -5,7 +5,7 @@ This script will ask you for a directory to back up and will then copy all files
 ## How to run?
 - Save the script wherever you like
 - Run the script by typing:`bash simple-backup-script.sh`
-- It will guide you through the process of backin up
+- It will guide you through the process of backing up
 
 ## Additional information
 > [!WARNING]
