@@ -9,4 +9,4 @@ This script will ask you for a directory to back up and will then copy all files
 
 ## Additional information
 > [!WARNING]
-> This is a beginner project, dont use this on files or directories that are important to you!
+> This is a beginner project, don't use this on files or directories that are important to you!
