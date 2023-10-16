@@ -14,4 +14,4 @@ read backup #save their reply to a variable
 if [ -d $origin ]; then
     cp -r $origin. "$backup"
 fi
-echo "The files in $origin have been backed up to $backup" #copy the files to the backup directory
+echo "The files in $origin have been backed up to $backup. Thank you for using my script!" #copy the files to the backup directory
