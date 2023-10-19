@@ -1,6 +1,9 @@
 #! /bin/bash
-echo "Please specify which directory you want to backup.
-Please use the following format: \"/your/directory/\"" #explain to the user what they have to do
+echo "#######################################################"
+echo "# $0 v1.3                        #"
+echo "# Please specify which directory you want to backup.  #
+# Please use the following format: \"/your/directory/\" #" #explain to the user what they have to do
+echo "#######################################################"
 echo "Directory to backup: " #ask them for the source directory
 read origin #save their reply to a variable
 if [ ! -d "$origin" ]; then #check whether their reply is actually a directory, if not, exit and give an error message
