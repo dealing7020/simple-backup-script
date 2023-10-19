@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "#######################################################"
-echo "# $0 v1.3                        #"
+echo "# $0 v1.4                        #"
 echo "# Please specify which directory you want to backup.  #
 # Please use the following format: \"/your/directory/\" #" #explain to the user what they have to do
 echo "#######################################################"
