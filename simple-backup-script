@@ -1,0 +1,42 @@
+#! /bin/bash
+set +x
+NAME=$(realpath --relative-to="$PWD" "$0")
+echo "#######################################################"
+echo "# "$NAME" v1.4       #   (q to quit)                 "
+echo "# Please specify which directory you want to backup.  #
+# Please use the following format: \"/your/directory/\" #" #explain to the user what they have to do
+echo "#######################################################"
+echo "Directory to backup: " #ask them for the source directory
+
+read origin #save their reply to a variable
+
+
+
+origin=${origin/\~/$HOME}
+echo "Backing up directory: "$origin""
+
+
+if [ "$origin" == "q" ];then
+exit
+fi
+
+if [ ! -d "$origin" ]; then #check whether their reply is actually a directory, if not, exit and give an error message
+    echo "\"$origin\" is not a valid directory. Please try again."
+    exit
+
+fi
+echo "Please specify to which directory the files should be backed up to. Please bear in mind that files in the specified directory could be overwritten." #ask the user for the direcotry they want their files backed up to
+echo "Directory for backup: "
+
+read backup #save their reply to a variable
+backup=${backup/\~/$HOME}
+if [ -d "$backup" ]; then
+    cp -r "$origin" "$backup"
+else
+	mkdir "$backup"
+	cp -r "$origin" "$backup"
+fi
+
+if [ -d "$backup" ]; then
+echo "The files in "$origin" have been backed up to "$backup". Thank you for using my script!" #copy the files to the backup directory
+fi
